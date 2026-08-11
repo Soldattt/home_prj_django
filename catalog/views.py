@@ -8,16 +8,16 @@ from catalog.models import Product
 
 class ProductListView(ListView):
     model = Product
-    template_name = "products/products_list.html"
-    context_object_name = "products"
+    template_name = "blogs/blog_list.html"
+    context_object_name = "blogs"
 
 class ProductDetailView(DetailView):
     model = Product
-    template_name = "products/product_detail.html"
+    template_name = "blogs/blog_detail.html"
     context_object_name = "product"
 
 class ContactsFormView(FormView):
-    template_name = 'products/contacts.html'
+    template_name = 'blogs/contacts.html'
     form_class = ContactForm
     def form_valid(self, form):
         name = form.cleaned_data['name']
