@@ -17,7 +17,7 @@ class Blog(models.Model):
         ordering = ['title']
 
     def __str__(self):
-        return f'Тайтл: {self.title}, дата создания: {self.created_at}, просмотров: {self.status}.'
+        return f'Тайтл: {self.title}, дата создания: {self.created_at}, просмотров: {self.count}.'
 
 
 
